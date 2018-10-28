@@ -2,10 +2,12 @@
 
 namespace Kgregorywd\Currencies;
 
+use Kgregorywd\Currencies\Console\SeedCurrenciesCommand;
 use Route;
 use Illuminate\Support\ServiceProvider;
-use Kgregorywd\Currencies\Console\ParseCurrenciesCommand;
 use Kgregorywd\Currencies\Drivers\Currency;
+use Kgregorywd\Currencies\Extensions\MenuBuilder;
+use Kgregorywd\Currencies\Console\ParseCurrenciesCommand;
 
 class CurrencyServiceProvider extends ServiceProvider
 {
@@ -25,6 +27,7 @@ class CurrencyServiceProvider extends ServiceProvider
      */
     protected $commands = [
         ParseCurrenciesCommand::class,
+        SeedCurrenciesCommand::class,
     ];
 
     /**
@@ -34,7 +37,13 @@ class CurrencyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->mapWebRoutes();
+
+        $this->registerTranslations();
+
+        $this->registerMigrations();
+
+        MenuBuilder::build();
     }
 
     /**
@@ -51,6 +60,8 @@ class CurrencyServiceProvider extends ServiceProvider
         });
 
         $this->registerCommands();
+
+        $this->registerViews();
     }
 
     /**
@@ -70,9 +81,56 @@ class CurrencyServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        $sourcePath = __DIR__.'/../Routes';
+        $sourcePath = __DIR__.'/Routes';
+
         Route::middleware('web')
             ->namespace($this->namespace)
             ->group("$sourcePath/web.php");
+    }
+
+    /**
+     * Register views.
+     *
+     * @return void
+     */
+    public function registerViews()
+    {
+        $viewPath = resource_path('views/vendor/currencies');
+
+        $sourcePath = __DIR__.'/Resources/views';
+
+        $this->publishes([
+            $sourcePath => $viewPath
+        ], 'views');
+
+        $this->loadViewsFrom(array_merge(array_map(function ($path) {
+            return $path . '/vendor/currencies';
+        }, \Config::get('view.paths')), [$sourcePath]), 'currency');
+    }
+
+    /**
+     * Register translations.
+     *
+     * @return void
+     */
+    public function registerTranslations()
+    {
+        $langPath = resource_path('lang/vendor/currencies');
+
+        if (is_dir($langPath)) {
+            $this->loadTranslationsFrom($langPath, 'currency');
+        } else {
+            $this->loadTranslationsFrom(__DIR__ .'/Resources/lang', 'currency');
+        }
+    }
+
+    /**
+     * Register translations.
+     *
+     * @return void
+     */
+    public function registerMigrations()
+    {
+        $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
     }
 }

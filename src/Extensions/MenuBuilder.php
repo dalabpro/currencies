@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Extensions;
+namespace Kgregorywd\Currencies\Extensions;
 
 use Menu;
 
@@ -14,9 +14,11 @@ class MenuBuilder
 
             // Second Level
 
-            $menu->settings->add(trans("backend.menu.currencies"), route('backend.currencies.index'))
-                ->active('settings/currencies/*')
-                ->data('order', 4);
+            $menu->add(trans("currency::backend.menu.currencies"), 'currencies')
+                ->active('currencies/*')
+                ->data('icon', 'th-list')
+                ->data('category', 0)
+                ->data('order', PHP_INT_MAX-2);
         });
     }
 }
