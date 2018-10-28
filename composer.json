@@ -1,0 +1,30 @@
+{
+    "name": "kgregorywd/currencies",
+    "description": "jj",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Gregory Kovalev",
+            "email": "kgregorywd@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Kgregorywd\\Currencies\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kgregorywd\\Currencies\\CurrencyServiceProvider"
+            ],
+            "aliases": {
+                "Currency": "Kgregorywd\\Currencies\\Facade"
+            }
+        }
+    }
+}
