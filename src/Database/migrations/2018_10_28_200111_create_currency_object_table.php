@@ -16,9 +16,9 @@ class CreateCurrencyObjectTable extends Migration
         Schema::create('currency_object', function (Blueprint $table) {
             $table->unsignedInteger('currency_id');
             $table->unsignedInteger('object_id');
-            $table->float('price', 10, 4);
-            $table->float('price_old', 10, 4);
-            $table->float('price_day', 10, 4);
+            $table->integer('price')->default(0);
+            $table->integer('price_old')->default(0);
+            $table->integer('price_day')->default(0);
             $table->timestamps();
         });
     }

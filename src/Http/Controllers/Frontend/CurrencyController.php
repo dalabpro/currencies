@@ -58,7 +58,7 @@ class CurrencyController extends FrontendController
             foreach ($currencies as $currency) {
                 $price = $tryPrice / (float)$currency->ratio;
                 $object->currencies()->attach($currency->id, [
-                    'price' => $price,
+                    'price' => (int)$price,
                 ]);
             }
         }
