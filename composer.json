@@ -1,6 +1,6 @@
 {
     "name": "kgregorywd/currencies",
-    "description": "jj",
+    "description": "Turkish Central Bank currency parser",
     "type": "library",
     "license": "MIT",
     "version": "1.0.0",
@@ -11,9 +11,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "symfony/dom-crawler": "^4.1"
-    },
+    "require": {},
     "autoload": {
         "psr-4": {
             "Kgregorywd\\Currencies\\": "src/"
