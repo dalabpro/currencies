@@ -24,6 +24,8 @@ class Currency extends Model
      */
     protected $fillable = [
         'name',
+        'alias',
+        'code',
         'icon',
         'ratio',
     ];
@@ -44,5 +46,10 @@ class Currency extends Model
         parent::boot();
 
         self::observe(CurrencyObserver::class);
+    }
+
+    public function objects()
+    {
+        return $this->belongsToMany(ObjectModel::class, 'currency_object', 'currency_id', 'object_id')->withPivot(['price', 'price_old', 'price_day']);
     }
 }

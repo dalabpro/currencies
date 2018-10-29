@@ -3,7 +3,6 @@
 namespace Kgregorywd\Currencies\Http\Controllers\Backend;
 
 use App\Http\Controllers\BackendController;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Kgregorywd\Currencies\Models\Currency;
 
@@ -18,9 +17,6 @@ class CurrencyController extends BackendController
 
             $this->setCollect([
                 'titleIndex' => trans("currency::{$this->prefix}.{$this->getCollect('type')}.title_index"),
-                'titleCreate' => trans("currency::{$this->prefix}.{$this->getCollect('type')}.title_create"),
-                'titleShow' => trans("currency::{$this->prefix}.{$this->getCollect('type')}.title_show"),
-                'titleEdit' => trans("currency::{$this->prefix}.{$this->getCollect('type')}.title_edit"),
                 'viewPath' => $this->getCollect('viewPath'),
             ])->setCollect([
                 'breadcrumbs' => array_merge($this->getCollect('breadcrumbs'), [
@@ -37,14 +33,10 @@ class CurrencyController extends BackendController
 
     public function index(Currency $model)
     {
-
         $this
-            ->setCollect('model', $model)
-            ->setCollect('models', $model->all())
+            ->setCollect('models', $model->paginate(25))
             ->setCollect('breadcrumbs', (String)view()->make('backend.ajax.breadcrumb', $this->getCollect())->render());
 
-//        dd($this->getCollect());
         return view('currency::backend.currencies.index', $this->getCollect());
-//        dd('currencies');
     }
 }
