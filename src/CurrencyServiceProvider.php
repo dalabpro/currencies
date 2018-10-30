@@ -6,6 +6,7 @@ use Kgregorywd\Currencies\Console\SeedCurrenciesCommand;
 use Route;
 use Illuminate\Support\ServiceProvider;
 use Kgregorywd\Currencies\Drivers\Currency;
+use Kgregorywd\Currencies\Extensions\MenuBuilder;
 use Kgregorywd\Currencies\Console\ParseCurrenciesCommand;
 
 class CurrencyServiceProvider extends ServiceProvider
@@ -41,6 +42,8 @@ class CurrencyServiceProvider extends ServiceProvider
         $this->registerTranslations();
 
         $this->registerMigrations();
+
+        MenuBuilder::build();
     }
 
     /**

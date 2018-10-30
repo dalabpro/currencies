@@ -5,7 +5,6 @@ namespace Kgregorywd\Currencies\Http\Controllers\Backend;
 use App\Http\Controllers\BackendController;
 use Illuminate\Http\Request;
 use Kgregorywd\Currencies\Models\Currency;
-use Kgregorywd\Currencies\Extensions\MenuBuilder;
 
 class CurrencyController extends BackendController
 {
@@ -27,8 +26,6 @@ class CurrencyController extends BackendController
                     ],
                 ]),
             ]);
-
-            MenuBuilder::build();
 
             return $next($request);
         });
