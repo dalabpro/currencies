@@ -36,7 +36,7 @@ class CurrenciesTableSeeder extends Seeder
                     "name" => "Лира",
                     "alias" => "lira",
                     "code" => "TRY",
-                    "icon" => "£",
+                    "icon" => "₺",
                     "ratio" => 1,
                 ],
                 [

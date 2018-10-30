@@ -3,7 +3,7 @@
     "description": "Turkish Central Bank currency parser",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "authors": [
         {
             "name": "Gregory Kovalev",
