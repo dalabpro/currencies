@@ -46,7 +46,7 @@ class Currency
             ->find($model->id) : $model;
 
         $alias = $locale === 'tr' ? 'lira' : 'euro';
-        $currency = $object->currencies->where('alias', $alias)->first();
+        $currency = $object->currencies ? $object->currencies->where('alias', $alias)->first() : null;
 
         if ($currency) {
 
