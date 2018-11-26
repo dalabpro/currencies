@@ -1,11 +1,11 @@
 <?php
 
-namespace Kgregorywd\Currencies\Http\Controllers\Frontend;
+namespace Dalab\Currencies\Http\Controllers\Frontend;
 
 use App\Http\Controllers\FrontendController;
 use Illuminate\Http\Request;
-use Kgregorywd\Currencies\Models\Currency;
-use Kgregorywd\Currencies\Models\ObjectModel;
+use Dalab\Currencies\Models\Currency;
+use Dalab\Currencies\Models\ObjectModel;
 use Symfony\Component\CssSelector\CssSelectorConverter;
 use Symfony\Component\DomCrawler\Crawler;
 

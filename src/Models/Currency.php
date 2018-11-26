@@ -1,6 +1,6 @@
 <?php
 
-namespace Kgregorywd\Currencies\Models;
+namespace Dalab\Currencies\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

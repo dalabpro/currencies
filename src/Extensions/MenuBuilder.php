@@ -1,6 +1,6 @@
 <?php
 
-namespace Kgregorywd\Currencies\Extensions;
+namespace Dalab\Currencies\Extensions;
 
 use Menu;
 

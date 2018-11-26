@@ -1,6 +1,6 @@
 <?php
 
-namespace Kgregorywd\Currencies\Console;
+namespace Dalab\Currencies\Console;
 
 use Artisan;
 use Illuminate\Console\Command;
@@ -38,7 +38,7 @@ class SeedCurrenciesCommand extends Command
      */
     public function handle()
     {
-        $class = "\\Kgregorywd\\Currencies\\Database\\Seed\\DatabaseSeeder";
+        $class = "\\Dalab\\Currencies\\Database\\Seed\\DatabaseSeeder";
 
         Artisan::call('db:seed', ['--class' => $class]);
     }

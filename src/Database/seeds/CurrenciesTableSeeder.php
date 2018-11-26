@@ -1,10 +1,10 @@
 <?php
 
-namespace Kgregorywd\Currencies\Database\Seed;
+namespace Dalab\Currencies\Database\Seed;
 
 use DB;
 use Illuminate\Database\Seeder;
-use Kgregorywd\Currencies\Models\Currency;
+use Dalab\Currencies\Models\Currency;
 
 class CurrenciesTableSeeder extends Seeder
 {

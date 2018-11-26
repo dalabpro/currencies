@@ -1,8 +1,8 @@
 <?php
 
-namespace Kgregorywd\Currencies\Drivers;
+namespace Dalab\Currencies\Drivers;
 
-use Kgregorywd\Currencies\Models\ObjectModel;
+use Dalab\Currencies\Models\ObjectModel;
 use View;
 
 class Currency

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kgregorywd\Currencies;
+namespace Dalab\Currencies;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {

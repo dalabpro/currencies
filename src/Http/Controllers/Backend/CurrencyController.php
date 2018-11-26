@@ -1,10 +1,10 @@
 <?php
 
-namespace Kgregorywd\Currencies\Http\Controllers\Backend;
+namespace Dalab\Currencies\Http\Controllers\Backend;
 
 use App\Http\Controllers\BackendController;
 use Illuminate\Http\Request;
-use Kgregorywd\Currencies\Models\Currency;
+use Dalab\Currencies\Models\Currency;
 
 class CurrencyController extends BackendController
 {

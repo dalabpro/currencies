@@ -1,6 +1,6 @@
 <?php
 
-namespace Kgregorywd\Currencies\Models;
+namespace Dalab\Currencies\Models;
 
 use App\Models\Calendar;
 use App\Models\CategoryI18n;

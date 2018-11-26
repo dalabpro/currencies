@@ -1,6 +1,6 @@
 <?php
 
-namespace Kgregorywd\Currencies\Database\Seed;
+namespace Dalab\Currencies\Database\Seed;
 
 use Illuminate\Database\Seeder;
 

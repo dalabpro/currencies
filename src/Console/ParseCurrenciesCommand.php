@@ -1,6 +1,6 @@
 <?php
 
-namespace Kgregorywd\Currencies\Console;
+namespace Dalab\Currencies\Console;
 
 use Illuminate\Console\Command;
 use Symfony\Component\DomCrawler\Crawler;
