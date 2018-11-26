@@ -1,5 +1,5 @@
 {
-    "name": "kgregorywd/currencies",
+    "name": "dalab/currencies",
     "description": "Turkish Central Bank currency parser",
     "type": "library",
     "license": "MIT",
@@ -14,16 +14,16 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Kgregorywd\\Currencies\\": "src/"
+            "Dalab\\Currencies\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Kgregorywd\\Currencies\\CurrencyServiceProvider"
+                "Dalab\\Currencies\\CurrencyServiceProvider"
             ],
             "aliases": {
-                "Currency": "Kgregorywd\\Currencies\\Facade"
+                "Currency": "Dalab\\Currencies\\Facade"
             }
         }
     }
