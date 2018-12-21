@@ -14,7 +14,7 @@ class Currency
             ->find($model->id) : $model;
 
         $alias = $locale === 'tr' ? 'lira' : 'euro';
-        $currencies = $object->currencies;
+        $currencies = $object->currencies->unique('pivot.currency_id');
 
         return (string) View::make('currency::backend.ajax.backend', compact(
             'object',
@@ -30,7 +30,7 @@ class Currency
             ->find($model->id) : $model;
 
         $alias = $locale === 'tr' ? 'lira' : 'euro';
-        $currencies = $object->currencies;
+        $currencies = $object->currencies->unique('pivot.currency_id');
 
         return (string) View::make('currency::backend.ajax.frontend', compact(
             'object',
