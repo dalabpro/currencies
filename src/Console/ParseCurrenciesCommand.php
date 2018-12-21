@@ -1,6 +1,6 @@
 <?php
 
-namespace Dalab\Currencies\Console;
+namespace Dalabpro\Currencies\Console;
 
 use Illuminate\Console\Command;
 use Symfony\Component\DomCrawler\Crawler;

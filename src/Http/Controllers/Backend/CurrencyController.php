@@ -1,10 +1,10 @@
 <?php
 
-namespace Dalab\Currencies\Http\Controllers\Backend;
+namespace Dalabpro\Currencies\Http\Controllers\Backend;
 
 use App\Http\Controllers\BackendController;
 use Illuminate\Http\Request;
-use Dalab\Currencies\Models\Currency;
+use Dalabpro\Currencies\Models\Currency;
 
 class CurrencyController extends BackendController
 {

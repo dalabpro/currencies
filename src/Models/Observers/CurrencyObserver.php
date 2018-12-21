@@ -1,18 +1,18 @@
 <?php
 
 
-namespace Modules\Integration\Models\Observers;
+namespace Dalabpro\Currencies\Models\Observers;
 
 use App;
 use Auth;
-use App\Models\Currency;
+use Dalabpro\Currencies\Models\Currency;
 
 class CurrencyObserver
 {
     /**
      * Listen to the Email creating event.
      *
-     * @param Email #email
+     * @param Currency $email
      * @return bool
      */
     public function creating(Currency $email)

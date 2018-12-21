@@ -1,6 +1,6 @@
 <?php
 
-namespace Dalab\Currencies;
+namespace Dalabpro\Currencies;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {

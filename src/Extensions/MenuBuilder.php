@@ -1,6 +1,6 @@
 <?php
 
-namespace Dalab\Currencies\Extensions;
+namespace Dalabpro\Currencies\Extensions;
 
 use Menu;
 

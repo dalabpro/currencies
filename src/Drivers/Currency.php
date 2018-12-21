@@ -1,8 +1,8 @@
 <?php
 
-namespace Dalab\Currencies\Drivers;
+namespace Dalabpro\Currencies\Drivers;
 
-use Dalab\Currencies\Models\ObjectModel;
+use Dalabpro\Currencies\Models\ObjectModel;
 use View;
 
 class Currency

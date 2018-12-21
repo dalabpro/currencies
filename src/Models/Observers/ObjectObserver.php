@@ -1,6 +1,6 @@
 <?php
 
-namespace Dalab\Currencies\Models\Observers;
+namespace Dalabpro\Currencies\Models\Observers;
 
 use Auth;
 use Event;

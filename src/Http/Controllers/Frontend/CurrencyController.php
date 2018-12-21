@@ -1,11 +1,11 @@
 <?php
 
-namespace Dalab\Currencies\Http\Controllers\Frontend;
+namespace Dalabpro\Currencies\Http\Controllers\Frontend;
 
 use App\Http\Controllers\FrontendController;
 use Illuminate\Http\Request;
-use Dalab\Currencies\Models\Currency;
-use Dalab\Currencies\Models\ObjectModel;
+use Dalabpro\Currencies\Models\Currency;
+use Dalabpro\Currencies\Models\ObjectModel;
 use Symfony\Component\CssSelector\CssSelectorConverter;
 use Symfony\Component\DomCrawler\Crawler;
 

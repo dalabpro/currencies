@@ -1,9 +1,9 @@
 {
-    "name": "dalab/currencies",
+    "name": "dalabpro/currencies",
     "description": "Turkish Central Bank currency parser",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "authors": [
         {
             "name": "Gregory Kovalev",
@@ -14,16 +14,16 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Dalab\\Currencies\\": "src/"
+            "Dalabpro\\Currencies\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Dalab\\Currencies\\CurrencyServiceProvider"
+                "Dalabpro\\Currencies\\CurrencyServiceProvider"
             ],
             "aliases": {
-                "Currency": "Dalab\\Currencies\\Facade"
+                "Currency": "Dalabpro\\Currencies\\Facade"
             }
         }
     }

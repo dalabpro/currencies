@@ -1,6 +1,6 @@
 <?php
 
-namespace Dalab\Currencies\Database\Seed;
+namespace Dalabpro\Currencies\Database\Seed;
 
 use Illuminate\Database\Seeder;
 

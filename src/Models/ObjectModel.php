@@ -1,6 +1,6 @@
 <?php
 
-namespace Dalab\Currencies\Models;
+namespace Dalabpro\Currencies\Models;
 
 use App\Models\Calendar;
 use App\Models\CategoryI18n;
@@ -10,7 +10,7 @@ use App\Models\ObjectModelI18n;
 use App\Models\Personal;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Observers\ObjectObserver;
+use Dalabpro\Currencies\Models\Observers\ObjectObserver;
 
 class ObjectModel extends Model
 {

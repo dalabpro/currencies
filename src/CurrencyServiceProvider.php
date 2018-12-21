@@ -1,13 +1,13 @@
 <?php
 
-namespace Dalab\Currencies;
+namespace Dalabpro\Currencies;
 
-use Dalab\Currencies\Console\SeedCurrenciesCommand;
+use Dalabpro\Currencies\Console\SeedCurrenciesCommand;
 use Route;
 use Illuminate\Support\ServiceProvider;
-use Dalab\Currencies\Drivers\Currency;
-use Dalab\Currencies\Extensions\MenuBuilder;
-use Dalab\Currencies\Console\ParseCurrenciesCommand;
+use Dalabpro\Currencies\Drivers\Currency;
+use Dalabpro\Currencies\Extensions\MenuBuilder;
+use Dalabpro\Currencies\Console\ParseCurrenciesCommand;
 
 class CurrencyServiceProvider extends ServiceProvider
 {
@@ -18,7 +18,7 @@ class CurrencyServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Dalab\Currencies\Http\Controllers';
+    protected $namespace = 'Dalabpro\Currencies\Http\Controllers';
 
     /**
      * The available commands

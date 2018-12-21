@@ -1,10 +1,10 @@
 <?php
 
-namespace Dalab\Currencies\Models;
+namespace Dalabpro\Currencies\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Modules\Integration\Models\Observers\CurrencyObserver;
+use Dalabpro\Currencies\Models\Observers\CurrencyObserver;
 
 class Currency extends Model
 {

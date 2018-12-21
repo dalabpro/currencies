@@ -1,10 +1,10 @@
 <?php
 
-namespace Dalab\Currencies\Database\Seed;
+namespace Dalabpro\Currencies\Database\Seed;
 
 use DB;
 use Illuminate\Database\Seeder;
-use Dalab\Currencies\Models\Currency;
+use Dalabpro\Currencies\Models\Currency;
 
 class CurrenciesTableSeeder extends Seeder
 {
